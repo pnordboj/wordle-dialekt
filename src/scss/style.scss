@@ -1,0 +1,17 @@
+@import "components/_header.scss";
+@import "components/_main.scss";
+@import "components/_footer.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(15 23 42);
+    font-family: 'Open Sans', sans-serif;
+}
+
+p, h1, h2, h3, label, button {
+    color: rgb(229 231 235);
+}
