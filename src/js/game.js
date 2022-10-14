@@ -27,12 +27,13 @@ document.addEventListener("keyup", (e) => {
         return;
     }
     let pressedKey = String(e.key).toUpperCase();
-    if (pressedKey === "Backspace" && nextLetter !== 0) {
+    
+    if (pressedKey === "BACKSPACE" && nextLetter !== 0) {
         deleteLetter()
         return
     }
 
-    if (pressedKey === "Enter") {
+    if (pressedKey === "ENTER") {
         checkGuess()
         return
     }
@@ -157,14 +158,13 @@ function shadeKeyBoard(letter, color) {
 
 document.getElementById("keyboard-cont").addEventListener("click", (e) => {
     const target = e.target
-
     if(!target.classList.contains("keyboard-button")) {
         return
     }
     let key = target.textContent
 
-    if(key === "Backspace") {
-        key = "Backspace"
+    if(key === "BACKSPACE") {
+        key = "DEL"
     }
 
     document.dispatchEvent(new KeyboardEvent("keyup", {key: key}))
